@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import User
 from django.shortcuts import render, get_object_or_404
-from .forms import UserForm
+from .forms import UserForm, LoginForm
 from django.shortcuts import redirect
 
 # Create your views here.
@@ -33,3 +33,16 @@ def user_edit(request, pk):
 	else:
 		form = UserForm(instance=user)
 		return render(request, 'register/user_edit.html', {'form': form})
+
+def user_login(request):
+	if request.method == "POST":
+		form = LoginForm(request.POST)
+		if form.is_valid():
+			
+			
+
+
+			return redirect('user_list')
+	else:
+		form = LoginForm()
+		return render(request, 'register/user_login.html', {'form': form})

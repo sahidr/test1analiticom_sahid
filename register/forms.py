@@ -11,3 +11,13 @@ class UserForm(forms.ModelForm):
         widgets = {
             'password': forms.PasswordInput(),
         }
+
+class LoginForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        password = forms.CharField(widget=forms.PasswordInput)
+        fields = ('email', 'password',)
+        widgets = {
+            'password': forms.PasswordInput(),
+        }

@@ -14,8 +14,10 @@
 	            <div class="col-md-8">
 			       
 			        <div class="page-header">
-			        <a href="{% url 'user_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span> Sign Up</a>
-			            <h1>Users</h1>
+			        <p>	
+			        	<a href="{% url 'user_new' %}" class="btn btn-default" ><span class="glyphicon glyphicon-plus"></span> Sign Up</a>
+			        	<a href="{% url 'user_login' %}" class="btn btn-default" ><span class="glyphicon glyphicon-user"></span> Log In</a></p>
+			            <h1><a href="{% url 'user_list' %}">Users</a></h1>
 			        </div>
                 {% block content %}
                 {% endblock %}
