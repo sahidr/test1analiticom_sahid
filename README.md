@@ -1,1 +1,0 @@
-# test1analiticom_sahid
